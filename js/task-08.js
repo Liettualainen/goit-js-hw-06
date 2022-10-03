@@ -11,11 +11,14 @@ function onFormSubmit (event) {
     return console.log("Please fill in all the fields!");
   }
   
+  const data = {};
   const formData = new FormData (event.currentTarget);
      formData.forEach ((value, name) => {
-        console.log(`onFormSubmit - >name:`, name );
-        console.log(`onFormSubmit - >value:`, value );        
+        data[name]= value;
+        //console.log(`onFormSubmit - >name:`, name );
+        //console.log(`onFormSubmit - >value:`, value );        
     }); 
+    console.log(data);
 
   console.log(`Login: ${email.value}, Password: ${password.value}`);
   event.currentTarget.reset();      

@@ -7,7 +7,8 @@ const spanButton = document.querySelector('.color');
 
 
 onButtonClick.addEventListener ('click', () => {    
- onButtonClick.style.backgroundColor = getRandomHexColor();
+ //onButtonClick.style.backgroundColor = getRandomHexColor();
+ document.querySelector('body').style.backgroundColor = getRandomHexColor();
  spanButton.textContent = onButtonClick.style.backgroundColor;
   console.log(spanButton.textContent);
 
